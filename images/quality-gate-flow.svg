@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700" letter-spacing="-0.5">QUALITY GATE FLOW</text>
+  <text x="450" y="72" text-anchor="middle" fill="#64748b" font-size="13">Every deliverable must pass before shipping</text>
+
+  <!-- User starts session -->
+  <rect x="340" y="95" width="220" height="44" rx="22" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="122" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="600">USER STARTS SESSION</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="139" x2="450" y2="165" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Load fluxterprise -->
+  <rect x="325" y="165" width="250" height="44" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#shadow)"/>
+  <text x="450" y="183" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600">LOAD FLUXTERPRISE</text>
+  <text x="450" y="199" text-anchor="middle" fill="#94a3b8" font-size="10">Pointer Block in CLAUDE.md / AGENTS.md</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="209" x2="450" y2="235" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Ask WHEN -->
+  <rect x="310" y="235" width="280" height="52" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="257" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700">ASK: WHEN?</text>
+  <text x="450" y="275" text-anchor="middle" fill="#94a3b8" font-size="11">1. DURING work  /  2. AFTER work</text>
+
+  <!-- Two branches -->
+  <!-- Left: DURING -->
+  <line x1="380" y1="287" x2="220" y2="330" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="100" y="330" width="240" height="44" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+  <text x="220" y="348" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">MODE 1: DURING</text>
+  <text x="220" y="364" text-anchor="middle" fill="#64748b" font-size="10">Apply rules while building</text>
+
+  <!-- Right: AFTER -->
+  <line x1="520" y1="287" x2="680" y2="330" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="560" y="330" width="240" height="44" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="680" y="348" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="600">MODE 2: AFTER</text>
+  <text x="680" y="364" text-anchor="middle" fill="#64748b" font-size="10">Audit existing, pick findings to fix</text>
+
+  <!-- Both converge to 3 steps -->
+  <line x1="220" y1="374" x2="220" y2="405" stroke="#475569" stroke-width="1.5"/>
+  <line x1="680" y1="374" x2="680" y2="405" stroke="#475569" stroke-width="1.5"/>
+  <line x1="220" y1="405" x2="680" y2="405" stroke="#475569" stroke-width="1.5"/>
+  <line x1="450" y1="405" x2="450" y2="425" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 3 Steps -->
+  <rect x="310" y="425" width="280" height="52" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="450" y="443" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600">3 STEPS (ALWAYS RUN)</text>
+  <text x="450" y="461" text-anchor="middle" fill="#94a3b8" font-size="10">1. Settle direction  2. Ask before creating  3. Run Quality Gate</text>
+
+  <!-- Arrow down to gate -->
+  <line x1="450" y1="477" x2="450" y2="503" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- QUALITY GATE (5 blocks) -->
+  <rect x="120" y="503" width="660" height="90" rx="12" fill="#0f172a" stroke="url(#accent)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="525" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">QUALITY GATE</text>
+
+  <!-- 5 blocks -->
+  <rect x="140" y="535" width="116" height="44" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1"/>
+  <text x="198" y="553" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600">HARD GATE</text>
+  <text x="198" y="567" text-anchor="middle" fill="#64748b" font-size="9">Absolute rules</text>
+
+  <rect x="264" y="535" width="116" height="44" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+  <text x="322" y="553" text-anchor="middle" fill="#fcd34d" font-size="10" font-weight="600">PURPOSE GATE</text>
+  <text x="322" y="567" text-anchor="middle" fill="#64748b" font-size="9">Technique + reason</text>
+
+  <rect x="388" y="535" width="116" height="44" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+  <text x="446" y="553" text-anchor="middle" fill="#93c5fd" font-size="10" font-weight="600">CRAFTSMANSHIP</text>
+  <text x="446" y="567" text-anchor="middle" fill="#64748b" font-size="9">Dials + levers</text>
+
+  <rect x="512" y="535" width="116" height="44" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="570" y="553" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">QUALITY LOCKS</text>
+  <text x="570" y="567" text-anchor="middle" fill="#64748b" font-size="9">Consistency</text>
+
+  <rect x="636" y="535" width="116" height="44" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+  <text x="694" y="553" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600">PERFORMANCE</text>
+  <text x="694" y="567" text-anchor="middle" fill="#64748b" font-size="9">Timing + a11y</text>
+
+  <!-- Watermark -->
+  <text x="450" y="610" text-anchor="middle" fill="#334155" font-size="10">fluxterprise.dev  |  Created by Candra Prasetya</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg3)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700" letter-spacing="-0.5">BEFORE / AFTER</text>
+  <text x="450" y="64" text-anchor="middle" fill="#64748b" font-size="13">What changes when you use fluxterprise</text>
+
+  <!-- WITHOUT Column -->
+  <rect x="40" y="85" width="400" height="450" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" opacity="0.4"/>
+  <rect x="40" y="85" width="400" height="40" rx="12" fill="#ef4444" opacity="0.15"/>
+  <text x="240" y="111" text-anchor="middle" fill="#fca5a5" font-size="14" font-weight="700">WITHOUT FLUXTERPRISE</text>
+
+  <!-- Without items -->
+  <text x="60" y="148" fill="#ef4444" font-size="11">01</text>
+  <text x="85" y="148" fill="#e2e8f0" font-size="12" font-weight="600">Blue-purple gradient background</text>
+  <text x="85" y="164" fill="#64748b" font-size="10">AI default palette, no brand identity</text>
+
+  <text x="60" y="194" fill="#ef4444" font-size="11">02</text>
+  <text x="85" y="194" fill="#e2e8f0" font-size="12" font-weight="600">"Revolutionize your workflow"</text>
+  <text x="85" y="210" fill="#64748b" font-size="10">Generic buzzwords, no specific value</text>
+
+  <text x="60" y="240" fill="#ef4444" font-size="11">03</text>
+  <text x="85" y="240" fill="#e2e8f0" font-size="12" font-weight="600">"Get Started" CTA button</text>
+  <text x="85" y="256" fill="#64748b" font-size="10">Generic CTA, no context</text>
+
+  <text x="60" y="286" fill="#ef4444" font-size="11">04</text>
+  <text x="85" y="286" fill="#e2e8f0" font-size="12" font-weight="600">"10,000+ teams trust us"</text>
+  <text x="85" y="302" fill="#64748b" font-size="10">Fake statistics, fabricated claims</text>
+
+  <text x="60" y="332" fill="#ef4444" font-size="11">05</text>
+  <text x="85" y="332" fill="#e2e8f0" font-size="12" font-weight="600">3 identical feature cards</text>
+  <text x="85" y="348" fill="#64748b" font-size="10">Copy-paste layout, no hierarchy</text>
+
+  <text x="60" y="378" fill="#ef4444" font-size="11">06</text>
+  <text x="85" y="378" fill="#e2e8f0" font-size="12" font-weight="600">Broken mobile layout</text>
+  <text x="85" y="394" fill="#64748b" font-size="10">Horizontal overflow, colliding text</text>
+
+  <text x="60" y="424" fill="#ef4444" font-size="11">07</text>
+  <text x="85" y="424" fill="#e2e8f0" font-size="12" font-weight="600">"Something went wrong" error</text>
+  <text x="85" y="440" fill="#64748b" font-size="10">Generic error, no retry action</text>
+
+  <text x="60" y="470" fill="#ef4444" font-size="11">08</text>
+  <text x="85" y="470" fill="#e2e8f0" font-size="12" font-weight="600">Client says "this looks AI"</text>
+  <text x="85" y="486" fill="#64748b" font-size="10">Rework, delay, reputation cost</text>
+
+  <!-- WITH Column -->
+  <rect x="460" y="85" width="400" height="450" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" opacity="0.4"/>
+  <rect x="460" y="85" width="400" height="40" rx="12" fill="#10b981" opacity="0.15"/>
+  <text x="660" y="111" text-anchor="middle" fill="#6ee7b7" font-size="14" font-weight="700">WITH FLUXTERPRISE</text>
+
+  <!-- With items -->
+  <text x="480" y="148" fill="#10b981" font-size="11">01</text>
+  <text x="505" y="148" fill="#e2e8f0" font-size="12" font-weight="600">Palette from DESIGN.md brand identity</text>
+  <text x="505" y="164" fill="#64748b" font-size="10">FG-01: gradient serves hierarchy, reason written</text>
+
+  <text x="480" y="194" fill="#10b981" font-size="11">02</text>
+  <text x="505" y="194" fill="#e2e8f0" font-size="12" font-weight="600">"Cut meetings from 30min to 5min"</text>
+  <text x="505" y="210" fill="#64748b" font-size="10">FG-16: specific benefit, no buzzwords</text>
+
+  <text x="480" y="240" fill="#10b981" font-size="11">03</text>
+  <text x="505" y="240" fill="#e2e8f0" font-size="12" font-weight="600">"Start your free trial"</text>
+  <text x="505" y="256" fill="#64748b" font-size="10">FG-15: specific action, product context</text>
+
+  <text x="480" y="286" fill="#10b981" font-size="11">04</text>
+  <text x="505" y="286" fill="#e2e8f0" font-size="12" font-weight="600">No fake stats, honest value prop</text>
+  <text x="505" y="302" fill="#64748b" font-size="10">FG-17, FG-38: empty > deceptive</text>
+
+  <text x="480" y="332" fill="#10b981" font-size="11">05</text>
+  <text x="505" y="332" fill="#e2e8f0" font-size="12" font-weight="600">Varied layout, content hierarchy</text>
+  <text x="505" y="348" fill="#64748b" font-size="10">FG-14: hierarchy reason written down</text>
+
+  <text x="480" y="378" fill="#10b981" font-size="11">06</text>
+  <text x="505" y="378" fill="#e2e8f0" font-size="12" font-weight="600">Verified at 375px, 768px, 1024px</text>
+  <text x="505" y="394" fill="#64748b" font-size="10">FG-03: no overflow, perfect reflow</text>
+
+  <text x="480" y="424" fill="#10b981" font-size="11">07</text>
+  <text x="505" y="424" fill="#e2e8f0" font-size="12" font-weight="600">"Could not load posts. Retry?"</text>
+  <text x="505" y="440" fill="#64748b" font-size="10">Named failure + action (microcopy)</text>
+
+  <text x="480" y="470" fill="#10b981" font-size="11">08</text>
+  <text x="505" y="470" fill="#e2e8f0" font-size="12" font-weight="600">Client says "this looks professional"</text>
+  <text x="505" y="486" fill="#64748b" font-size="10">Quality Gate PASS, shipped first time</text>
+
+  <!-- Watermark -->
+  <text x="450" y="552" text-anchor="middle" fill="#334155" font-size="10">fluxterprise.dev  |  Created by Candra Prasetya</text>
+</svg>
