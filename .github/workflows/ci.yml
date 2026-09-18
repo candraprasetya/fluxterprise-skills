@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate Skills
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Validate Markdown files
+        run: |
+          echo "Checking for broken Markdown links..."
+          find . -name "*.md" -not -path "./.git/*" | while read file; do
+            echo "Checking: $file"
+            # Check for basic Markdown syntax issues
+            grep -n "\[.*\](" "$file" | grep -v "http" | grep -v "#" | head -5 || true
+          done
+      
+      - name: Validate skill frontmatter
+        run: |
+          echo "Validating SKILL.md frontmatter..."
+          find skills -name "SKILL.md" | while read file; do
+            echo "Checking: $file"
+            # Check for required frontmatter fields
+            if ! head -5 "$file" | grep -q "name:"; then
+              echo "ERROR: Missing 'name' in frontmatter: $file"
+              exit 1
+            fi
+            if ! head -5 "$file" | grep -q "description:"; then
+              echo "ERROR: Missing 'description' in frontmatter: $file"
+              exit 1
+            fi
+          done
+          echo "All frontmatter valid!"
+      
+      - name: Validate pointer block
+        run: |
+          echo "Checking README.md for pointer block..."
+          if grep -q "<!-- fluxterprise:start -->" README.md; then
+            echo "Pointer block found in README.md"
+          else
+            echo "WARNING: No pointer block found in README.md"
+          fi
+      
+      - name: Check for empty directories
+        run: |
+          echo "Checking for empty directories..."
+          if find skills -type d -empty | grep -q .; then
+            echo "ERROR: Empty directories found:"
+            find skills -type d -empty
+            exit 1
+          fi
+          echo "No empty directories found!"
+      
+      - name: Validate install script
+        run: |
+          echo "Checking install script syntax..."
+          bash -n scripts/install.sh
+          echo "Install script syntax valid!"
+      
+      - name: Check for antislop references
+        run: |
+          echo "Checking for old 'antislop' references..."
+          if grep -r "antislop" --include="*.md" --include="*.py" --include="*.sh" . | grep -v ".git"; then
+            echo "ERROR: Old 'antislop' references found!"
+            exit 1
+          fi
+          echo "No old references found!"
+
+  lint:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+      
+      - name: Run markdownlint
+        run: |
+          markdownlint '**/*.md' --ignore node_modules --config .markdownlint.json
+        continue-on-error: true
+
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: [validate, lint]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Check for version tag
+        id: check_tag
+        run: |
+          if git describe --tags --exact-match HEAD 2>/dev/null; then
+            echo "tag=$(git describe --tags --exact-match HEAD)" >> $GITHUB_OUTPUT
+            echo "has_tag=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_tag=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Create Release (if tagged)
+        if: steps.check_tag.outputs.has_tag == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.check_tag.outputs.tag }}
+          name: Fluxterprise Skills ${{ steps.check_tag.outputs.tag }}
+          body_path: CHANGELOG.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

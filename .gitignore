@@ -1,19 +1,27 @@
-# fluxterprise-skills
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-## Skills
+# OS
+.DS_Store
+Thumbs.db
 
-- `skills/fluxterprise/SKILL.md` - Core filter (38 rules, Delivery Gate, Liveliness Toolkit)
-- `skills/fluxterprise-ui/SKILL.md` - UI and visual patterns
-- `skills/fluxterprise-copywriting/SKILL.md` - Copy and text patterns
-- `skills/fluxterprise-human/SKILL.md` - Accessibility, contrast, keyboard, focus
-- `skills/fluxterprise-layoutmobile/SKILL.md` - Mobile responsive layout
-- `skills/fluxterprise-code/SKILL.md` - Code comment hygiene
-- `skills/fluxterprise-flutter/SKILL.md` - Flutter enterprise conventions
+# Build
+build/
+*.g.dart
+*.freezed.dart
 
-## Scripts
+# Dependencies
+.dart_tool/
+.packages
+pubspec.lock
 
-- `scripts/install.sh` - One-line installer
+# Logs
+*.log
 
-## Docs
-
-- `docs/FLUTTER-CONVENTIONS.md` - Detailed Flutter architecture reference
+# Temporary
+tmp/
+temp/
