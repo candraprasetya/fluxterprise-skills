@@ -1,5 +1,9 @@
 # Fluxterprise Skills
 
+[![CI](https://github.com/candraprasetya/fluxterprise-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/candraprasetya/fluxterprise-skills/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/candraprasetya/fluxterprise-skills/releases/tag/v1.0.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Quality gate system for AI coding agents. Enforce craft standards before any UI ships. Extended with Flutter enterprise conventions.
 >
 > Created by **Candra Prasetya**
@@ -463,6 +467,18 @@ Every design must declare three dials:
 fluxterprise-skills/
 ├── README.md
 ├── LICENSE
+├── CHANGELOG.md                    # Version history (Keep a Changelog)
+├── CONTRIBUTING.md                 # How to contribute
+├── CODE_OF_CONDUCT.md              # Community guidelines
+├── SECURITY.md                     # Security policy
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md           # Bug report template
+│   │   └── feature_request.md      # Feature request template
+│   ├── PULL_REQUEST_TEMPLATE.md    # PR template
+│   └── workflows/
+│       └── ci.yml                  # GitHub Actions CI
+├── images/                         # SVG diagrams
 ├── skills/
 │   ├── fluxterprise/
 │   │   └── SKILL.md           # Core gate (38 rules, Quality Gate)
@@ -505,6 +521,21 @@ fluxterprise-skills/
 ## Versioning
 
 Skills version together with the core fluxterprise system. A newer skill never mixes with an older core. If you update, update everything.
+
+Current version: **v1.0.0** — See [CHANGELOG.md](CHANGELOG.md) for details.
+
+## Contributing
+
+We welcome contributions! Please see:
+- [CONTRIBUTING.md](CONTRIBUTING.md) — How to contribute
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Community guidelines
+- [SECURITY.md](SECURITY.md) — Security policy
+
+## Community
+
+- [GitHub Issues](https://github.com/candraprasetya/fluxterprise-skills/issues) — Bug reports and feature requests
+- [GitHub Discussions](https://github.com/candraprasetya/fluxterprise-skills/discussions) — Questions and ideas
+- [Releases](https://github.com/candraprasetya/fluxterprise-skills/releases) — Version history
 
 ---
 
